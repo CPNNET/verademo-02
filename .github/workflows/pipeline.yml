@@ -1,1 +1,28 @@
+name: senhasegura CLI CI/CD
 
+on:
+  push:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run DSM CLI as Running Belt
+        env:
+          APPLICATION: ${{ secrets.APPLICATION }}
+          SYSTEM: ${{ secrets.SYSTEM }}
+          ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
+        run: |
+          dsm runb \
+            --app-name $APPLICATION \
+            --system $SYSTEM \
+            --environment $ENVIRONMENT \
+            --config .config.yml \
+            --tool-name github \
+          source .runb.vars && rm .runb.vars
