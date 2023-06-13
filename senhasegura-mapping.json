@@ -1,0 +1,28 @@
+{
+  "access_keys": [
+    {
+      "name": "MY_VAR",
+      "type": "SENHA",
+      "fields": {
+        "access_key_id": "SENHA_ACCESS_KEY_ID_VARIABLE",
+        "secret_access_key": "SENHA_SECRET_ACCESS_KEY_VARIABLE"
+      }
+    }
+  ],
+  "credentials": [
+    {
+      "name": "CREDENCIAL_VARIABLES",
+      "fields": {
+        "user": "USER_VARIABLE",
+        "password": "PASSWORD_VARIABLE",
+        "host": "HOST_VARIABLE"
+      }
+    }
+  ],
+  "key_value": [
+    {
+      "name": "SECRET_VARIABLES",
+      "fields": ["KEY_VALUE_VARIABLE"]
+    }
+  ]
+}
