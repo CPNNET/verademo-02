@@ -2,7 +2,7 @@
   "access_keys": [
     {
       "name": "MY_VAR",
-      "type": "SENHA",
+      "type": "veracode",
       "fields": {
         "access_key_id": "SENHA_ACCESS_KEY_ID_VARIABLE",
         "secret_access_key": "SENHA_SECRET_ACCESS_KEY_VARIABLE"
