@@ -13,14 +13,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  DJARRIN:
+  RodrigoRetamal:
     runs-on: self-hosted
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: PRUEBA HOLA MUNDO
-        run: echo Hello, world!
+      - name: First test
+        run: Test suceful
         
       - name: Run DSM CLI as Running Belt
         env:
@@ -28,6 +28,5 @@ jobs:
           SYSTEM: ${{ secrets.SYSTEM }}
           ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
         run: |
-          chmod 777 dsm
           chmod 777 .config.yaml
           ./dsm runb --app-name $APPLICATION --system $SYSTEM --environment $ENVIRONMENT --config .config.yaml --tool-name github
