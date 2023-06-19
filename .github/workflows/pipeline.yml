@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: First test
-        run: Test suceful
+        run: echo Test suceful
         
       - name: Run DSM CLI as Running Belt
         env:
