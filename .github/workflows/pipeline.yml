@@ -28,5 +28,4 @@ jobs:
           SYSTEM: ${{ secrets.SYSTEM }}
           ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
         run: |
-           .config.yaml
            ./dsm runb --app-name $APPLICATION --system $SYSTEM --environment $ENVIRONMENT --config .config.yaml --tool-name github
