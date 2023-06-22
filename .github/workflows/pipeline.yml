@@ -28,4 +28,4 @@ jobs:
           SYSTEM: ${{ secrets.SYSTEM }}
           ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
         run: |
-           .\dsm-windows-amd64.exe runb -a $APPLICATION -s $SYSTEM -e $ENVIRONMENT --config .config.yaml --tool github
+           .\dsm-windows-amd64.exe runb -a Veracode --system DevOps -e Pipeline --config .config.yaml --tool github
