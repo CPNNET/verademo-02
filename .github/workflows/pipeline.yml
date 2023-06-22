@@ -28,4 +28,4 @@ jobs:
           SYSTEM: ${{ secrets.SYSTEM }}
           ENVIRONMENT: ${{ secrets.ENVIRONMENT }}
         run: |
-           .\dsm-windows-amd64.exe runb --config .config.yaml --tool-name github
+           .\dsm-windows-amd64.exe runb --config .config.yaml --tool github
