@@ -22,8 +22,8 @@ jobs:
     - name: Build with Maven
       working-directory: ./app/
       run: mvn -B package --file pom.xml
-
-    - uses: actions/upload-artifact@v1
+      #actions/upload-artifact@v1
+    - uses: actions/upload-artifact@v2
       with:
         name: my-artifact
         path: app/target/verademo.war
