@@ -29,5 +29,38 @@ steps:
       java -jar pipeline-scan.jar -vid $(VERACODE_API_ID) -vkey $(VERACODE_API_KEY) -f /home/vsts/work/1/s/app/target/verademo.war || true
 - publish: $(System.DefaultWorkingDirectory)/results.json
   artifact: VeracodeBaseline
+ 
+  veracode_static_scan:
+  push:
+    trigger: true
+    branches_to_run:
+          - '*'
+    pull_request:
+      trigger: true
+      action:
+        - opened
+        - synchronize
+      target_branch:
+        - default_branch
+    analysis_branch: main
+    break_build_policy_findings: false
+    break_build_on_error: false
+    error_message: "Veracode SAST scan faced a problem. Please contact your Veracode administrator for more information. If you are a Veracode administrator, please contact Veracode support."
+    policy: 'Veracode Recommended Medium + SCA'
+    compile_locally: false
+    local_compilation_workflow: na
+veracode_sca_scan:   
+  push:
+    trigger: true
+    branches_to_run:
+      - '*'
+    branches_to_exclude:
+  pull_request:
+    trigger: true
+    action:
+      - opened
+      - synchronize
+    target_branch:
+      - default_branch
 
-
+    
