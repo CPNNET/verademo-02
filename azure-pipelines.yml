@@ -62,3 +62,4 @@ veracode_sca_scan:
       - synchronize
     target_branch:
       - default_branch
+
